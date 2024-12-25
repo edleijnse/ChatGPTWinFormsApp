@@ -74,4 +74,27 @@ public partial class Form1 : Form
     {
         // throw new System.NotImplementedException();
     }
+
+    private void buttonNextQuestion_Click(object sender, EventArgs e)
+    {
+        textQuestion.Text = "";
+    }
+
+    private void buttonCopyAnswer_Click(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(textAnswer.Text))
+        {
+            Clipboard.SetText(textAnswer.Text);
+            MessageBox.Show("Answer copied to clipboard, use CTRL+V to paste it");
+        }
+    }
+
+    private void buttonCopyChat_Click(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(textHistory.Text))
+        {
+            Clipboard.SetText(textHistory.Text);
+            MessageBox.Show("Complete chat copied to clipboard, use CTRL+V to paste it");
+        }
+    }
 }

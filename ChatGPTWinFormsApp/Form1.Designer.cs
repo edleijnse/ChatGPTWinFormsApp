@@ -34,6 +34,9 @@ partial class Form1
         buttonAsk = new System.Windows.Forms.Button();
         textAnswer = new System.Windows.Forms.TextBox();
         textHistory = new System.Windows.Forms.TextBox();
+        buttonNextQuestion = new System.Windows.Forms.Button();
+        buttonCopyAnswer = new System.Windows.Forms.Button();
+        buttonCopyChat = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // label1
@@ -57,9 +60,9 @@ partial class Form1
         // 
         // buttonAsk
         // 
-        buttonAsk.Location = new System.Drawing.Point(58, 180);
+        buttonAsk.Location = new System.Drawing.Point(59, 159);
         buttonAsk.Name = "buttonAsk";
-        buttonAsk.Size = new System.Drawing.Size(83, 32);
+        buttonAsk.Size = new System.Drawing.Size(152, 32);
         buttonAsk.TabIndex = 2;
         buttonAsk.Text = "Ask";
         buttonAsk.UseVisualStyleBackColor = true;
@@ -67,7 +70,7 @@ partial class Form1
         // 
         // textAnswer
         // 
-        textAnswer.Location = new System.Drawing.Point(62, 233);
+        textAnswer.Location = new System.Drawing.Point(59, 245);
         textAnswer.Multiline = true;
         textAnswer.Name = "textAnswer";
         textAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -84,11 +87,46 @@ partial class Form1
         textHistory.TabIndex = 4;
         textHistory.TextChanged += textHistory_TextChanged;
         // 
+        // buttonNextQuestion
+        // 
+        buttonNextQuestion.Location = new System.Drawing.Point(59, 197);
+        buttonNextQuestion.Name = "buttonNextQuestion";
+        buttonNextQuestion.Size = new System.Drawing.Size(152, 32);
+        buttonNextQuestion.TabIndex = 5;
+        buttonNextQuestion.Text = "Next question";
+        buttonNextQuestion.UseVisualStyleBackColor = true;
+        buttonNextQuestion.Click += buttonNextQuestion_Click;
+        // 
+        // buttonCopyAnswer
+        // 
+        buttonCopyAnswer.Location = new System.Drawing.Point(279, 160);
+        buttonCopyAnswer.Name = "buttonCopyAnswer";
+        buttonCopyAnswer.Size = new System.Drawing.Size(140, 30);
+        buttonCopyAnswer.TabIndex = 6;
+        buttonCopyAnswer.Text = "Copy answer";
+        buttonCopyAnswer.UseMnemonic = false;
+        buttonCopyAnswer.UseVisualStyleBackColor = true;
+        buttonCopyAnswer.Click += buttonCopyAnswer_Click;
+        // 
+        // buttonCopyChat
+        // 
+        buttonCopyChat.Location = new System.Drawing.Point(276, 199);
+        buttonCopyChat.Name = "buttonCopyChat";
+        buttonCopyChat.Size = new System.Drawing.Size(142, 29);
+        buttonCopyChat.TabIndex = 7;
+        buttonCopyChat.Text = "Copy chat";
+        buttonCopyChat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+        buttonCopyChat.UseVisualStyleBackColor = true;
+        buttonCopyChat.Click += buttonCopyChat_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(800, 729);
+        Controls.Add(buttonCopyChat);
+        Controls.Add(buttonCopyAnswer);
+        Controls.Add(buttonNextQuestion);
         Controls.Add(textHistory);
         Controls.Add(textAnswer);
         Controls.Add(buttonAsk);
@@ -99,6 +137,12 @@ partial class Form1
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Button buttonCopyChat;
+
+    private System.Windows.Forms.Button buttonCopyAnswer;
+
+    private System.Windows.Forms.Button buttonNextQuestion;
 
     private System.Windows.Forms.TextBox textHistory;
 
