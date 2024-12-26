@@ -50,20 +50,20 @@ public partial class ChatGPTGUI : Form
             // var getOpenAIResponseGpt4Task = aiClient.GetOpenAIResponseGpt4(myModel, inputText, contentHistory, apiKey);
             // getOpenAIResponseGpt4Task.Wait();
             string myAnswer = aiClient.GetOpenAIResponseGpt4(myModel, inputText, _contentHistory, apiKey);
-
+            string myAnswerFormatted = myAnswer.Replace("\n\n", Environment.NewLine + Environment.NewLine);
             // Add myAnswer to _contentHistory
-            _contentHistory.Add(myAnswer);
-            textAnswer.Text = myAnswer;
+            _contentHistory.Add(myAnswerFormatted);
+            textAnswer.Text = myAnswerFormatted;
 
             if (textHistory.Text.Length == 0)
             {
                 textHistory.Text = textHistory.Text +
-                                   inputText + Environment.NewLine + myAnswer;
+                                   inputText + Environment.NewLine + myAnswerFormatted;
             }
             else
             {
                 textHistory.Text = textHistory.Text + Environment.NewLine + Environment.NewLine +
-                                   inputText + Environment.NewLine + myAnswer;
+                                   inputText + Environment.NewLine + myAnswerFormatted;
             }
         }
         catch (IOException ex)
