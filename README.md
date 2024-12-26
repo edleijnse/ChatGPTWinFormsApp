@@ -43,8 +43,8 @@ This project is written in **C#** using the **Windows Forms** framework and adhe
 - **Operating System:** Windows 10 or higher.
 - **Framework:** .NET 8.0 runtime (ensure it's installed on your system).
 - **Internet Connection:** Required for accessing OpenAI's API.
-- **api_key you have to organize an api_key from openai, see https://platform.openai.com/docs/overview or https://chatgpt.com/ 
-- **store the api_key file directly in c:\ or adapt the location
+- **api_key** you have to organize an api_key from openai, see https://platform.openai.com/docs/overview or https://chatgpt.com/ 
+- **store the api_key file** directly in c:\ or adapt the location
 ### Installation
 1. **Download the Application:**
     - Obtain the latest executable file (`ChatGPTWinFormsApp.exe`) from the [releases section]() (add a link here if hosted online).
