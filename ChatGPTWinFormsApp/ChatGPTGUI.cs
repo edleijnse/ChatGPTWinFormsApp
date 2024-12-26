@@ -1,9 +1,9 @@
 namespace ChatGPTWinFormsApp;
 
-public partial class Form1 : Form
+public partial class ChatGPTGUI : Form
 {
     private static List<string> _contentHistory; // Shared global variable
-    public Form1()
+    public ChatGPTGUI()
     {
         InitializeComponent();
     }
@@ -27,7 +27,10 @@ public partial class Form1 : Form
     private void buttonAsk_Click(object sender, EventArgs e)
     {
         // throw new System.NotImplementedException();
+        Cursor = Cursors.WaitCursor;
         FillAnswer();
+        Cursor = Cursors.Default;
+        
     }
     private void FillAnswer()
     {
@@ -95,6 +98,17 @@ public partial class Form1 : Form
         {
             Clipboard.SetText(textHistory.Text);
             MessageBox.Show("Complete chat copied to clipboard, use CTRL+V to paste it");
+        }
+    }
+
+    private void buttonNewChat_Click(object sender, EventArgs e)
+    {
+        textQuestion.Text = string.Empty;
+        _contentHistory.Clear();
+        if (!string.IsNullOrEmpty(textHistory.Text))
+        {
+            textHistory.Text = string.Empty;
+            textAnswer.Text = string.Empty;
         }
     }
 }

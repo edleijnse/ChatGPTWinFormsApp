@@ -1,6 +1,6 @@
 ﻿namespace ChatGPTWinFormsApp;
 
-partial class Form1
+partial class ChatGPTGUI
 {
     /// <summary>
     ///  Required designer variable.
@@ -37,6 +37,7 @@ partial class Form1
         buttonNextQuestion = new System.Windows.Forms.Button();
         buttonCopyAnswer = new System.Windows.Forms.Button();
         buttonCopyChat = new System.Windows.Forms.Button();
+        buttonNewChat = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // label1
@@ -119,11 +120,22 @@ partial class Form1
         buttonCopyChat.UseVisualStyleBackColor = true;
         buttonCopyChat.Click += buttonCopyChat_Click;
         // 
-        // Form1
+        // buttonNewChat
+        // 
+        buttonNewChat.Location = new System.Drawing.Point(498, 160);
+        buttonNewChat.Name = "buttonNewChat";
+        buttonNewChat.Size = new System.Drawing.Size(108, 30);
+        buttonNewChat.TabIndex = 8;
+        buttonNewChat.Text = "New chat";
+        buttonNewChat.UseVisualStyleBackColor = true;
+        buttonNewChat.Click += buttonNewChat_Click;
+        // 
+        // ChatGPTGUI
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(800, 729);
+        Controls.Add(buttonNewChat);
         Controls.Add(buttonCopyChat);
         Controls.Add(buttonCopyAnswer);
         Controls.Add(buttonNextQuestion);
@@ -137,6 +149,8 @@ partial class Form1
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Button buttonNewChat;
 
     private System.Windows.Forms.Button buttonCopyChat;
 
