@@ -134,6 +134,7 @@ partial class ChatGPTGUI
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        BackColor = System.Drawing.SystemColors.Info;
         ClientSize = new System.Drawing.Size(800, 729);
         Controls.Add(buttonNewChat);
         Controls.Add(buttonCopyChat);
