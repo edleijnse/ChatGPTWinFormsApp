@@ -50,7 +50,8 @@ namespace ChatGPTWinFormsApp
 
         public string GetOpenAIResponseGpt4(string model, string inputText, List<string> contentHistory, string apiKey)
         {
-            var openAiClient = new ChatClient(model: "gpt-4o", apiKey: apiKey);
+            // var openAiClient = new ChatClient(model: "gpt-4o", apiKey: apiKey);
+            var openAiClient = new ChatClient(model: "o3-mini", apiKey: apiKey);
             
             // Combine inputText and contentHistory into a single input
             string combinedInput = string.Join(Environment.NewLine, contentHistory) + Environment.NewLine + inputText;
